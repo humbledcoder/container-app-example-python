@@ -1,4 +1,4 @@
-FROM python:3.10-alpine3.16
+FROM python:3.10-alpine3.17
 
 # ENV TZ Asia/Shanghai
 # RUN apk add tzdata && cp /usr/share/zoneinfo/${TZ} /etc/localtime && echo ${TZ} > /etc/timezone
