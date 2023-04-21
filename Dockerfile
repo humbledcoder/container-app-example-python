@@ -1,16 +1,13 @@
-FROM python:3.10-alpine3.17
+FROM python:3.10-bullseye
 
-# ENV TZ Asia/Shanghai
-# RUN apk add tzdata && cp /usr/share/zoneinfo/${TZ} /etc/localtime && echo ${TZ} > /etc/timezone
+ENV TZ Asia/Shanghai
+RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
-# RUN apk add ca-certificates
+WORKDIR /usr/src/app
 
-COPY . /app
+COPY requirements.txt ./
+RUN pip install --no-cache-dir -r requirements.txt
 
-WORKDIR /app
-
-RUN pip install --upgrade pip && pip install --user -r requirements.txt
-
-EXPOSE 8080
+COPY . .
 
 CMD ["python", "main.py"]
