@@ -1,10 +1,7 @@
-.git
+.git/
 .dockerignore
 .gitignore
-Dockerfile*
-LICENSE
-README.md
+.pylintrc
+.style.yapf
 
-.*
-dev-*
-*.in
+__pycache__/
