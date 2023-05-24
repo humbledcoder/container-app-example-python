@@ -1,7 +1,4 @@
 .git/
+.github/
 .dockerignore
 .gitignore
-.pylintrc
-.style.yapf
-
-__pycache__/
