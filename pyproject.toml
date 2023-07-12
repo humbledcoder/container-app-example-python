@@ -6,12 +6,13 @@ authors = ["whuwxl <whuwxl@gmail.com>"]
 
 [tool.poetry.dependencies]
 python = "^3.10"
-flask = "^2.3.2"
+fastapi = "^0.100.0"
+uvicorn = "^0.23.1"
 
 [tool.poetry.group.dev.dependencies]
-black = "^23.3.0"
-mypy = "^1.3.0"
-ruff = "^0.0.269"
+black = "^23.7.0"
+mypy = "^1.4.1"
+ruff = "^0.0.278"
 
 [tool.ruff]
 select = [
