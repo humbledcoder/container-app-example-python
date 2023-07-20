@@ -11,4 +11,4 @@ RUN poetry config virtualenvs.create false && poetry install --without dev
 
 COPY . .
 
-CMD ["python", "main.py"]
+CMD [ "uvicorn", "app:app", "--reload" "--port" "8080" ]

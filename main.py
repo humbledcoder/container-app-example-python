@@ -1,16 +1,13 @@
 """
 main
 """
+from typing import Dict
 
-from flask import Flask
+from fastapi import FastAPI
 
-app = Flask(__name__)
-
-
-@app.route("/")
-def hello_world() -> str:
-    return "<p>Hello World</p>"
+app = FastAPI()
 
 
-if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=8080, debug=True)
+@app.get("/")
+def read_root() -> Dict:
+    return {"Hello": "World"}
