@@ -26,7 +26,7 @@ jobs:
           cache: "poetry"
       - name: Install dependencies
         run: |
-          poetry install
+          poetry config virtualenvs.create true && poetry install
       - name: Lint
         run: |
           poetry run mypy .
