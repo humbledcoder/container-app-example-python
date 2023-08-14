@@ -20,5 +20,8 @@
 				"tamasfe.even-better-toml"
 			]
 		}
-	}
+	},
+	"forwardPorts": [
+		8080
+	]
 }
