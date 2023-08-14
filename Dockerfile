@@ -11,4 +11,4 @@ RUN poetry config virtualenvs.create false && poetry install --without dev
 
 COPY . .
 
-CMD [ "uvicorn", "app:app", "--reload" "--port" "8080" ]
+CMD [ "uvicorn", "main:app", "--reload" "--port" "8080" ]
