@@ -1,0 +1,23 @@
+{
+	"build": {
+		"dockerfile": "Dockerfile"
+	},
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"GitHub.copilot",
+				"GitHub.copilot-chat",
+				"ms-python.black-formatter",
+				"ms-python.isort",
+				"ms-python.mypy-type-checker",
+				"ms-python.python",
+				"ms-python.vscode-pylance",
+				"ms-toolsai.jupyter",
+				"ms-toolsai.jupyter-renderers",
+				"ms-toolsai.vscode-jupyter-cell-tags",
+				"ms-toolsai.vscode-jupyter-slideshow",
+				"streetsidesoftware.code-spell-checker"
+			]
+		}
+	}
+}
