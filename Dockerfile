@@ -1,4 +1,4 @@
-FROM python:3.10-bullseye
+FROM python:3.10-bookworm
 
 ENV TZ Asia/Shanghai
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
@@ -9,6 +9,6 @@ RUN pip install --no-cache-dir poetry
 COPY pyproject.toml poetry.lock ./
 RUN poetry config virtualenvs.create false && poetry install --without dev
 
-COPY . .
+COPY main.py ./main.py
 
 CMD [ "uvicorn", "main:app", "--reload" "--port" "8080" ]
