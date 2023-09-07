@@ -13,6 +13,6 @@ WORKDIR /workspaces/container-app-example-python
 
 FROM app-dev-base AS app-dev-dependencies
 
-COPY pyproject.toml ./
+COPY pyproject.toml poetry.lock ./
 
 RUN poetry install --no-interaction --no-ansi --with=dev
