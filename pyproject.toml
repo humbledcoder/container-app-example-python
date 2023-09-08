@@ -5,20 +5,20 @@ description = ""
 authors = ["whuwxl <whuwxl@gmail.com>"]
 
 [tool.poetry.dependencies]
-python = "^3.10"
-fastapi = "^0.101.1"
+python = "^3.11"
+fastapi = "^0.103.1"
 uvicorn = "^0.23.2"
 
 [tool.poetry.group.dev.dependencies]
 black = "^23.7.0"
 mypy = "^1.5.1"
-ruff = "^0.0.285"
+ruff = "^0.0.287"
 
 [tool.ruff]
 select = [
-  "E",  # pycodestyle
-  "F",  # pyflakes
-  "I",  # isort
+  "E", # pycodestyle
+  "F", # pyflakes
+  "I", # isort
 ]
 
 [tool.mypy]
