@@ -8,4 +8,6 @@ RUN poetry config virtualenvs.create false && poetry install --without dev
 
 COPY main.py ./main.py
 
-CMD [ "uvicorn", "main:app", "--reload" "--port" "8080" ]
+EXPOSE 8080
+
+CMD [ "uvicorn", "main:app", "--reload", "--port", "8080" ]
