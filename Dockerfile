@@ -6,8 +6,8 @@ RUN pip install --no-cache-dir poetry
 COPY pyproject.toml poetry.lock ./
 RUN poetry config virtualenvs.create false && poetry install --without dev
 
-COPY main.py ./main.py
+COPY app app
 
 EXPOSE 8080
 
-CMD [ "uvicorn", "main:app", "--reload", "--port", "8080" ]
+CMD [ "uvicorn", "app.main:app", "--reload", "--port", "8080" ]
