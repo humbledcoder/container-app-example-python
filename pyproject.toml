@@ -26,6 +26,7 @@ select = [
 ]
 
 [tool.poetry.group.test.dependencies]
+httpx = "^0.25.2"
 pytest = "^7.4.3"
 
 [tool.pytest.ini_options]

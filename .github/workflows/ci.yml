@@ -1,4 +1,4 @@
-name: Python Linting
+name: CI
 
 on: [push]
 
@@ -29,3 +29,6 @@ jobs:
           poetry run mypy .
           poetry run black . --check
           poetry run ruff .
+      - name: Test
+        run: |
+          poetry run pytest
